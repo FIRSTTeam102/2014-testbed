@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.templates.commands.CommandBase;
 import edu.wpi.first.wpilibj.templates.commands.ExampleCommand;
+import edu.wpi.first.wpilibj.templates.commands.InitGyro;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -96,6 +97,8 @@ public class RobotTemplate extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         try {
+            Command cmd = new InitGyro();
+            cmd.start();
 //        autonomousCommand.cancel();
         } catch (Exception e) {
             MessageLogger.LogError("Unhandled exception in teleopInit.");

@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.templates.OI;
 import edu.wpi.first.wpilibj.templates.subsystems.Chassis;
 import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
+import edu.wpi.first.wpilibj.templates.subsystems.GyroSubsystem;
 import edu.wpi.first.wpilibj.templates.subsystems.Lights;
 import edu.wpi.first.wpilibj.templates.subsystems.Motors;
 import edu.wpi.first.wpilibj.templates.subsystems.Relays;
@@ -26,7 +27,8 @@ public abstract class CommandBase extends Command {
     public static Motors motors;
     public static Lights lights;
     public static Relays relays;
-
+    public static GyroSubsystem gyro;
+    
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
         // will), constructing it during the construction of CommandBase (from
@@ -38,6 +40,7 @@ public abstract class CommandBase extends Command {
             motors = new Motors();
             lights = new Lights();
             relays = new Relays();
+            gyro = new GyroSubsystem();
 
             oi = new OI();
 //            chassis = new Chassis();
