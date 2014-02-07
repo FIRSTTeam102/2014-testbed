@@ -44,11 +44,11 @@ public class GyroSubsystem extends Subsystem {
         double rate = gyro.getRate();
         double aiAvg = aChannel.getAverageValue();
         
-        MessageLogger.LogMessage("Gyro angle, rate, aiAvg: \t"
-                + MathLib.round(angle, 3)
-                + "\t" + MathLib.round(rate, 3)
-                + "\t" + MathLib.round(aiAvg, 3)
-        );
+//        MessageLogger.LogMessage("Gyro angle, rate, aiAvg: \t"
+//                + MathLib.round(angle, 3)
+//                + "\t" + MathLib.round(rate, 3)
+//                + "\t" + MathLib.round(aiAvg, 3)
+//        );
 
         return angle;
     }

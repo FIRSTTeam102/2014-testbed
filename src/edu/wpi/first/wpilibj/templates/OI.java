@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.DigitalIOButton;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.templates.commands.DriveADistance;
 import edu.wpi.first.wpilibj.templates.commands.ExampleCommand;
 import edu.wpi.first.wpilibj.templates.commands.LightEachLight;
 import edu.wpi.first.wpilibj.templates.commands.LightALight;
@@ -76,9 +77,10 @@ public class OI {
 //            xBoxY.whileHeld(new RunMotor(2, 1.0, 0.1));
 //            xBoxX.whileHeld(new RunMotor(3, 1.0, 0.1));
             xBoxRightBumper.whenPressed(new LightEachLight());
-            xBoxLeftBumper.whenPressed(new RunEachMotor());
+//            xBoxLeftBumper.whenPressed(new RunEachMotor());
             xBoxA.whenPressed(new ToggleOneRelay(1));
             xBoxB.whenPressed(new ToggleOneRelay(2));
+            xBoxY.whenPressed(new DriveADistance(12.0));
 
         } catch (Exception e) {
             MessageLogger.LogError("Unhandled Exception in OI.");

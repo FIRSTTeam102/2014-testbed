@@ -38,7 +38,8 @@ public class RobotMap {
    // public static final int compressorSwitchChannel = 1;
 
     //Digital Inputs
-   
+   public static final int encoderAport = 13;
+   public static final int encoderBport = 14;
     
     // Solenoid Modules and Ports
   
@@ -72,5 +73,13 @@ public class RobotMap {
     public static final int light6 = 1;
     public static final int light7 = 1;
     public static final int light8 = 1;
+    
+    //Other Constants
+    public static final double WheelDiameter = 6;
+    public static final double WheelCircumference = WheelDiameter * Math.PI;
+    public static final double PulsesPerRevolution = 360.0;
+    public static final double WheelRotationPerMotorRotations = 12.75;
+    public static final double EncoderInchesPerPulse = (WheelCircumference * WheelRotationPerMotorRotations) / PulsesPerRevolution;
+    
 }
 

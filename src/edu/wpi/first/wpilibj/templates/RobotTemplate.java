@@ -58,6 +58,7 @@ public class RobotTemplate extends IterativeRobot {
     }
     public void disabledPeriodic() {
         try {
+//            CommandBase.motorWithEncoder.disable();
 //            autonomousCommand.cancel();
         } catch (Exception e) {
             MessageLogger.LogError("Unhandled Exception in disabledPeriodic()");

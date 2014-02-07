@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.templates.subsystems.Chassis;
 import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj.templates.subsystems.GyroSubsystem;
 import edu.wpi.first.wpilibj.templates.subsystems.Lights;
+import edu.wpi.first.wpilibj.templates.subsystems.MotorWithEncoder;
 import edu.wpi.first.wpilibj.templates.subsystems.Motors;
 import edu.wpi.first.wpilibj.templates.subsystems.Relays;
 
@@ -24,6 +25,7 @@ public abstract class CommandBase extends Command {
     public static OI oi;
     // Create a single static instance of all of your subsystems
     public static Chassis chassis;
+    public static MotorWithEncoder motorWithEncoder;
     public static Motors motors;
     public static Lights lights;
     public static Relays relays;
@@ -37,10 +39,11 @@ public abstract class CommandBase extends Command {
         // news. Don't move it.
         try {
             // SUBSYSTEMS need to be created before OI!!!
-            motors = new Motors();
+//            motors = new Motors();
             lights = new Lights();
             relays = new Relays();
             gyro = new GyroSubsystem();
+            motorWithEncoder = new MotorWithEncoder();
 
             oi = new OI();
 //            chassis = new Chassis();
