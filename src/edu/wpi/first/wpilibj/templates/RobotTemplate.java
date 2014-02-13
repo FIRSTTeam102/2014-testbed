@@ -71,7 +71,7 @@ public class RobotTemplate extends IterativeRobot {
     public void autonomousInit() {
         try {
             // schedule the autonomous command (example)
-//        autonomousCommand.start();
+        autonomousCommand.start();
         } catch (Exception e) {
             MessageLogger.LogError("Unhandled exception in autonomousInit.");
             MessageLogger.LogError(e.toString());

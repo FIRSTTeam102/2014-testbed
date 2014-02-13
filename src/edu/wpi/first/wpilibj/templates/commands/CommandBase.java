@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.templates.OI;
 import edu.wpi.first.wpilibj.templates.subsystems.Chassis;
+import edu.wpi.first.wpilibj.templates.subsystems.EncoderSystem;
 import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj.templates.subsystems.GyroSubsystem;
 import edu.wpi.first.wpilibj.templates.subsystems.Lights;
@@ -30,6 +31,7 @@ public abstract class CommandBase extends Command {
     public static Lights lights;
     public static Relays relays;
     public static GyroSubsystem gyro;
+    public static EncoderSystem encoderSystem;
     
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
@@ -39,12 +41,12 @@ public abstract class CommandBase extends Command {
         // news. Don't move it.
         try {
             // SUBSYSTEMS need to be created before OI!!!
-//            motors = new Motors();
+            motors = new Motors();
             lights = new Lights();
             relays = new Relays();
             gyro = new GyroSubsystem();
             motorWithEncoder = new MotorWithEncoder();
-
+//            encoderSystem = new EncoderSystem();
             oi = new OI();
 //            chassis = new Chassis();
 

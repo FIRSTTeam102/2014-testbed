@@ -18,9 +18,9 @@ import edu.wpi.first.wpilibj.templates.RobotMap;
  */
 public class MotorWithEncoder extends PIDSubsystem {
 
-    private static final double Kp = 0.2;
+    private static final double Kp = 0.01;
     private static final double Ki = 0.0;
-    private static final double Kd = 0.0;
+    private static final double Kd = 0.01;
     Talon motor;
     public Encoder encoder;
     
@@ -29,7 +29,7 @@ public class MotorWithEncoder extends PIDSubsystem {
     public MotorWithEncoder() {
         super("MotorWithEncoder", Kp, Ki, Kd);
 
-        motor = new Talon(RobotMap.frontRightMotor);
+        motor = new Talon(6);
         encoder = new Encoder(RobotMap.encoderAport,RobotMap.encoderBport);
         encoder.setDistancePerPulse(RobotMap.EncoderInchesPerPulse);
         // Use these to get going:

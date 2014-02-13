@@ -77,10 +77,10 @@ public class OI {
 //            xBoxY.whileHeld(new RunMotor(2, 1.0, 0.1));
 //            xBoxX.whileHeld(new RunMotor(3, 1.0, 0.1));
             xBoxRightBumper.whenPressed(new LightEachLight());
-//            xBoxLeftBumper.whenPressed(new RunEachMotor());
+            xBoxLeftBumper.whenPressed(new RunEachMotor());
             xBoxA.whenPressed(new ToggleOneRelay(1));
             xBoxB.whenPressed(new ToggleOneRelay(2));
-            xBoxY.whenPressed(new DriveADistance(12.0));
+            xBoxY.whenPressed(new DriveADistance(180.0));
 
         } catch (Exception e) {
             MessageLogger.LogError("Unhandled Exception in OI.");

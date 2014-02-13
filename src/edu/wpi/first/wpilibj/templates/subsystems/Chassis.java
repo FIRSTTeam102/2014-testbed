@@ -84,11 +84,11 @@ public class Chassis extends Subsystem {
         //leftJoyY = RobotMap.stickDeadBand.Deaden(leftJoyY);
         // rightJoyX = RobotMap.twistDeadBand.Deaden(rightJoyX + RobotMap.twistCorrection);
 
-        MessageLogger.LogMessage("Joysticks LX, LY, RX, RY: \t"
-                + MathLib.round(leftJoyX, 3)
-                + "\t" + MathLib.round(leftJoyY, 3)
-                + "\t" + MathLib.round(rightJoyX, 3)
-                + "\t" + MathLib.round(rightJoyY, 3));
+//        MessageLogger.LogMessage("Joysticks LX, LY, RX, RY: \t"
+//                + MathLib.round(leftJoyX, 3)
+//                + "\t" + MathLib.round(leftJoyY, 3)
+//                + "\t" + MathLib.round(rightJoyX, 3)
+//                + "\t" + MathLib.round(rightJoyY, 3));
 
         drive.mecanumDrive_Cartesian(leftJoyX, leftJoyY, rightJoyX, 0);
     }
