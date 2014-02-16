@@ -39,11 +39,11 @@ public abstract class CommandBase extends Command {
         // news. Don't move it.
         try {
             // SUBSYSTEMS need to be created before OI!!!
-//            motors = new Motors();
+           motors = new Motors();
             lights = new Lights();
             relays = new Relays();
             gyro = new GyroSubsystem();
-            motorWithEncoder = new MotorWithEncoder();
+ //           motorWithEncoder = new MotorWithEncoder();
 
             oi = new OI();
 //            chassis = new Chassis();

@@ -14,6 +14,8 @@ import edu.wpi.first.wpilibj.templates.commands.RunEachMotor;
 import edu.wpi.first.wpilibj.templates.commands.RunMotor;
 import edu.wpi.first.wpilibj.templates.commands.ToggleEachRelay;
 import edu.wpi.first.wpilibj.templates.commands.ToggleOneRelay;
+import edu.wpi.first.wpilibj.templates.commands.RunAllMotors;
+
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -80,7 +82,11 @@ public class OI {
 //            xBoxLeftBumper.whenPressed(new RunEachMotor());
             xBoxA.whenPressed(new ToggleOneRelay(1));
             xBoxB.whenPressed(new ToggleOneRelay(2));
-            xBoxY.whenPressed(new DriveADistance(12.0));
+            //           xBoxY.whenPressed(new DriveADistance(12.0));
+            xBoxX.whenPressed(new RunAllMotors(1.0));
+            xBoxX.whenReleased(new RunAllMotors(0.0));
+            xBoxY.whenPressed(new RunAllMotors(-1.0));       
+            xBoxY.whenReleased(new RunAllMotors(0.0));
 
         } catch (Exception e) {
             MessageLogger.LogError("Unhandled Exception in OI.");

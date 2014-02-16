@@ -12,33 +12,40 @@ import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.templates.RobotMap;
 
-
 /**
  *
  * @author Admin
  */
 public class Motors extends Subsystem {
+
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-        SpeedController[] speedcontrollers;
-      
-    public Motors(){
-        speedcontrollers = new SpeedController[6];
+    SpeedController[] speedcontrollers;
+
+    public Motors() {
+        speedcontrollers = new SpeedController[9];
         speedcontrollers[0] = new Victor(1);
-        speedcontrollers[1] = new Talon(2);
-        speedcontrollers[2] = new Victor(3);
-        speedcontrollers[3] = new Jaguar(4);
+        speedcontrollers[1] = new Victor(2);
+        speedcontrollers[2] = new Talon(3);
+        speedcontrollers[3] = new Victor(4);
         speedcontrollers[4] = new Victor(5);
-        speedcontrollers[5] = new Victor(6);
+        speedcontrollers[5] = new Talon(6);
+        speedcontrollers[6] = new Victor(7);
+        speedcontrollers[7] = new Victor(8);
+        speedcontrollers[8] = new Jaguar(9);
     }
-    
-    
 
     public void initDefaultCommand() {
-        
+
     }
-   
-    public void runMotor(int port, double speed){
+
+    public void runMotor(int port, double speed) {
         speedcontrollers[port - 1].set(speed);
+    }
+
+    public void runMotor(double speed) {
+        for (int port = 1; port <= 9; port++) {
+            speedcontrollers[port - 1].set(speed);
+        }
     }
 }
