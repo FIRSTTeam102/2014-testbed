@@ -5,6 +5,8 @@
  */
 package edu.wpi.first.wpilibj.templates.subsystems;
 
+import Team102Lib.MathLib;
+import Team102Lib.MessageLogger;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
@@ -41,6 +43,7 @@ public class Motors extends Subsystem {
 
     public void runMotor(int port, double speed) {
         speedcontrollers[port - 1].set(speed);
+        MessageLogger.LogMessage("Running motor " + port + " at " + MathLib.round(speed, 3));
     }
 
     public void runMotor(double speed) {

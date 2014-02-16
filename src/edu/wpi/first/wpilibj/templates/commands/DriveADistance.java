@@ -5,6 +5,8 @@
  */
 package edu.wpi.first.wpilibj.templates.commands;
 
+import Team102Lib.MessageLogger;
+
 /**
  *
  * @author Admin
@@ -21,7 +23,9 @@ public class DriveADistance extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() {
         motorWithEncoder.encoder.reset();
+        motorWithEncoder.encoder.start();
         motorWithEncoder.enable();
+        MessageLogger.LogMessage("PID Loop Enabled");
     }
 
     // Called repeatedly when this Command is scheduled to run

@@ -33,6 +33,15 @@ public class RunEachMotor extends CommandGroup {
         addSequential(new WaitCommand(0.5));
         addSequential(new RunMotor(6, 1.0, 2.0));
         addSequential(new RunMotor(6, -1.0, 2.0));
+        addSequential(new WaitCommand(0.5));
+        addSequential(new RunMotor(7, 1.0, 2.0));
+        addSequential(new RunMotor(7, -1.0, 2.0));
+        addSequential(new WaitCommand(0.5));
+        addSequential(new RunMotor(8, 1.0, 2.0));
+        addSequential(new RunMotor(8, -1.0, 2.0));
+        addSequential(new WaitCommand(0.5));
+        addSequential(new RunMotor(9, 1.0, 2.0));
+        addSequential(new RunMotor(9, -1.0, 2.0));
         // these will run in order.
 
         // To run multiple commands at the same time,
